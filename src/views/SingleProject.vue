@@ -106,7 +106,7 @@ export default {
 						id: 1,
 						name: 'Twitter',
 						icon: 'twitter',
-						url: '',
+						url: 'https://twitter.com/',
 					},
 					{
 						id: 2,
