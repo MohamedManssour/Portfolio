@@ -1,10 +1,12 @@
 {
   "name": "vuejs-tailwindcss-portfolio",
   "version": "0.1.0",
+  "homepage": "https://mohamedmanssour.github.io/Portfolio/",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist",
+    "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
