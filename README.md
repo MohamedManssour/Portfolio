@@ -1,4 +1,4 @@
-# Vuejs & TailwindCSS Portfolio - With Dark Mode
+# Vue.js & TailwindCSS Portfolio - With Dark Mode
 
 A simple portfolio starter theme built with Vue.js v3, Composition API and Tailwind CSS v3.
 

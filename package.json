@@ -1,10 +1,12 @@
 {
   "name": "vuejs-tailwindcss-portfolio",
   "version": "0.1.0",
+  "homepage": "https://mohamedmanssour.github.io",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "gh-pages -d dist",
+    "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-plugin-vue": "^7.0.0",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.21",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",

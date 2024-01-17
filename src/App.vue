@@ -4,48 +4,55 @@ import AppHeader from './components/shared/AppHeader';
 import AppFooter from './components/shared/AppFooter';
 
 export default {
-	components: {
-		AppHeader,
-		AppFooter,
-	},
-	data: () => {
-		return {
-			appTheme: localStorage.getItem('theme'),
-		};
-	},
-	mounted() {
-		feather.replace();
-	},
-	updated() {
-		feather.replace();
-	},
+  components: {
+    AppHeader,
+    AppFooter,
+  },
+  data() {
+    return {
+      appTheme: localStorage.getItem('theme') || 'light',
+    };
+  },
+  mounted() {
+    feather.replace();
+    this.applyTheme();
+  },
+  updated() {
+    feather.replace();
+  },
+  methods: {
+    handleThemeChange(newTheme) {
+      this.appTheme = newTheme;
+      localStorage.setItem('theme', newTheme);
+      this.applyTheme();
+    },
+    applyTheme() {
+      if (this.appTheme === 'dark') {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    }
+  }
 };
 </script>
 
 <template>
-	<div :class="appTheme" class="pt-0.5">
-		<!-- App header -->
-		<AppHeader />
-
-		<!-- Render active component contents with vue transition -->
-		<transition name="fade" mode="out-in">
-			<router-view :theme="appTheme" />
-		</transition>
-
-		<!-- Scroll to top -->
-		<back-to-top
-			visibleoffset="500"
-			right="30px"
-			bottom="20px"
-			class="shadow-lg"
-		>
-			<i data-feather="chevron-up"></i>
-		</back-to-top>
-
-		<!-- App footer -->
-		<AppFooter />
-	</div>
+  <div :class="{'dark': appTheme === 'dark'}" class="pt-0.5">
+    <AppHeader @theme-changed="handleThemeChange" :theme="appTheme" />
+    <transition name="fade" mode="out-in">
+      <router-view :theme="appTheme" />
+    </transition>
+    <back-to-top visibleoffset="500" right="30px" bottom="20px" class="shadow-lg">
+      <i data-feather="chevron-up"></i>
+    </back-to-top>
+    <AppFooter />
+  </div>
 </template>
+
+<!-- ... Your existing styles -->
+
+>
 
 <style>
 #app {

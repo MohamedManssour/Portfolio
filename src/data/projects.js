@@ -4,14 +4,15 @@
 const projects = [
 	{
 		id: 1,
-		title: 'Google Health Platform',
-		category: 'Web Application',
-		img: require('@/assets/images/web-project-2.jpg'),
+		title: 'Whack-A Error',
+		category: 'Web Game',
+		img: require('@/assets/images/web-project-2.png'),
+		route: 'whack-a-error'
 	},
 	{
 		id: 2,
-		title: 'Phoenix Digital Agency',
-		category: 'Mobile Application',
+		title: 'Chess Game Vs. AI',
+		category: 'Web Game',
 		img: require('@/assets/images/mobile-project-2.jpg'),
 	},
 	{

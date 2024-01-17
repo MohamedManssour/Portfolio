@@ -29,7 +29,7 @@ export default {
 				{
 					id: 2,
 					title: 'Kabul Project Management UI',
-					img: require('@/assets/images/web-project-2.jpg'),
+					img: require('@/assets/images/web-project-2.png'),
 				},
 				{
 					id: 3,

@@ -1,31 +1,37 @@
 import { ref } from '@vue/reactivity';
 
 export default function useThemeSwitcher() {
-	const currentTheme = ref('light');
+  const currentTheme = ref(localStorage.getItem('theme') || 'light');
 
-	function toggleTheme() {
-		if (currentTheme.value == 'dark') {
-			setLightTheme();
-		} else {
-			setDarkTheme();
-		}
-	}
+  function toggleTheme() {
+    if (currentTheme.value === 'dark') {
+      setLightTheme();
+    } else {
+      setDarkTheme();
+    }
+  }
 
-	// Light Theme Function
-	function setLightTheme() {
-		currentTheme.value = 'light';
+  function setLightTheme() {
+    currentTheme.value = 'light';
+    updateTheme();
+  }
 
-		process.isClient && localStorage.setItem('theme', 'light');
-	}
+  function setDarkTheme() {
+    currentTheme.value = 'dark';
+    updateTheme();
+  }
 
-	// Dark Theme Function
-	function setDarkTheme() {
-		currentTheme.value = 'dark';
+  function updateTheme() {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('theme', currentTheme.value);
+      document.body.classList.toggle('dark', currentTheme.value === 'dark');
+    }
+  }
 
-		process.isClient && localStorage.setItem('theme', 'dark');
-	}
-
-	return {
-		toggleTheme,
-	};
+  return {
+    currentTheme,
+    toggleTheme,
+    setLightTheme,
+    setDarkTheme
+  };
 }
