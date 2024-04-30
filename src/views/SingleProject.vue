@@ -12,11 +12,12 @@ export default {
 		ProjectGallery,
 		ProjectInfo,
 		ProjectRelatedProjects,
+		
 	},
 	data: () => {
 		return {
 			singleProjectHeader: {
-				singleProjectTitle: 'Project Management UI',
+				singleProjectTitle: 'My Projects',
 				singleProjectDate: 'Jul 26, 2021',
 				singleProjectTag: 'UI / Frontend',
 			},
@@ -43,27 +44,22 @@ export default {
 					{
 						id: 1,
 						title: 'Name',
-						details: 'Company Ltd',
+						details: 'Mohamed Manssour',
 					},
 					{
 						id: 2,
 						title: 'Services',
-						details: 'UI Design & Frontend Development',
-					},
-					{
-						id: 3,
-						title: 'Website',
-						details: 'https://company.com',
+						details: 'Full-Stack Development',
 					},
 					{
 						id: 4,
 						title: 'Phone',
-						details: '555 8888 888',
+						details: '(+1) 647-866-8336',
 					},
 				],
 				objectivesHeading: 'Objective',
 				objectivesDetails:
-					'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+					'My projects are meticulously crafted to achieve specific objectives, with a focus on intuitive user interfaces that enhance user experience. They are designed to not only be user-friendly but also to captivate users with enticing features, ensuring engagement and satisfaction.',
 				technologies: [
 					{
 						title: 'Tools & Technologies',
@@ -73,6 +69,8 @@ export default {
 							'JavaScript',
 							'Vue.js',
 							'TailwindCSS',
+							'Java',
+							'Arduino',
 							'AdobeXD',
 						],
 					},
@@ -82,23 +80,19 @@ export default {
 					{
 						id: 1,
 						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+							'Whack-A-Error Project: Utilized confirm and prompt dialogues to offer players the option to enter their scores into a leaderboard. Managed score storage and display using JavaScripts local storage and DOM manipulation. Administered a script for real-time scoring, incrementing score for each successful player whack. https://github.com/MohamedManssour/Whack-A-Error',
 					},
 					{
 						id: 2,
 						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+							'Chess Vs. AI Project: Constructed a basic-level chess AI employing a function for random legal moves, and intermediate and advanced levels using the minimax algorithm with a recursive function for exploring and evaluating moves at various depths. Developed a dynamic game system that effortlessly transitions between three modes. Designed a Chess Challenge Mode with adaptive puzzle scenarios, utilizing a custom puzzle engine for dynamic difficulty adjustment and a responsive UI https://github.com/MohamedManssour/Chess-Game-Vs-AI',
 					},
 					{
 						id: 3,
 						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+							'Automated Plant Watering System Project: Designed and implemented an automated plant hydration system, utilizing Arduino microcontrollers and Java programming, which effectively increased crop yield by 30% and reduced water consumption by 40%. Integrated remote monitoring and control capabilities, allowing for real-time modifications to irrigation schedules. https://github.com/MohamedManssour/Automated-Plant-Watering-System-',
 					},
-					{
-						id: 4,
-						details:
-							'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-					},
+					
 				],
 				socialSharingsHeading: 'Share This',
 				socialSharings: [

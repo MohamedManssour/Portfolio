@@ -21,7 +21,7 @@ export default {
 				{
 					id: 1,
 					value: 'web',
-					name: 'Web Application',
+					name: 'Web Game',
 				},
 				{
 					id: 2,
